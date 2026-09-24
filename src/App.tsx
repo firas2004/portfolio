@@ -267,11 +267,6 @@ export default function App() {
         viewport={{ once: true, margin: "-80px" }}
         variants={fadeUp}
       >
-        <div className="section-heading">
-          <p className="eyebrow">{tx.eyebrowLab}</p>
-          <h2>{tx.h2Lab}</h2>
-          <p>{tx.labDesc}</p>
-        </div>
         <Scene onSelect={setSelectedId} />
         <p className="scene-hint">{tx.sceneHint}</p>
       </motion.section>
@@ -393,7 +388,6 @@ export default function App() {
               <div className="tags">{selected.technologies.map((tag) => <span key={tag}>{tag}</span>)}</div>
               <h4>{tx.modalHighlights}</h4>
               <ul>{selected.details.map((detail) => <li key={detail}>{detail}</li>)}</ul>
-              <p className="modal-note">{tx.modalNote}</p>
             </motion.div>
           </motion.div>
         )}
