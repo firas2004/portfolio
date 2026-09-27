@@ -5,6 +5,7 @@ import {
   Linkedin, Mail, Sparkles, X, Wifi, Shield, Languages,
 } from "lucide-react";
 import { Scene } from "./components/Scene";
+import InteractiveTerminal from "./components/InteractiveTerminal";
 import { projects, type Project } from "./data/projects";
 import { t, type Lang } from "./i18n";
 
@@ -140,10 +141,7 @@ export default function App() {
           </div>
         </div>
         <div className="hero-panel">
-          <div className="terminal">
-            <div className="terminal-bar"><i /><i /><i /><span>firas@portfolio:~</span></div>
-            <pre>{tx.terminalContent}</pre>
-          </div>
+          <InteractiveTerminal lang={lang} onSelectProject={setSelectedId} />
         </div>
       </motion.section>
 
